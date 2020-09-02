@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card special-card" style="width: 50rem;">
+  <img class="card-img-top" src="<%= url_for(@leaf.cover_img) %>" alt=<%=@leaf.title%>>
+  <div class="card-body">
+    <h5 class="card-title"><%=@leaf.title%></h5>
+    <p class="card-text"><%=@leaf.body %>.</p>
+    <%= link_to 'Edit', edit_leaf_path(@leaf) %> |
+    <%= link_to 'Back', leafs_path %>
+  </div>
+</div>
+
+

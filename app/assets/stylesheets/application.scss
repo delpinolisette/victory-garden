@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_self
+ *
+ */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import "font-awesome";
+
+
+/* 
+ * Custom Styles
+ */
+
+ .navbar-brand {
+    font-family: 'Andale Mono', monospace;
+
+  }
+  
+  .nav-item {
+    font-family: 'Andale Mono', monospace;
+  }
+
+
+  body {
+    font-family: 'Andale Mono', monospace;
+    background-color: #aff59e !important; 
+  }
+
+  h1 {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #01256e;
+    font-weight: 500;
+    line-height: 1.25;
+    font-family: 'Andale Mono', monospace;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #01256e;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 2em 0 .67em;
+    font-family: 'Andale Mono', monospace;
+  }
+  
+  h3 {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #01256e;
+    font-weight: 300;
+    line-height: 1.25;
+    font-family: 'Andale Mono', monospace;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #44464b;
+    font-family: 'Andale Mono', monospace;
+    line-height: 1.5;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+  }
+  
+  li {
+    line-height: 1.5;
+    font-family: "Open Sans",sans-serif;
+  }
+
+  .special-card {
+    /* create a custom class so you 
+       do not run into specificity issues 
+       against bootstraps styles
+       which tends to work better than using !important 
+       (future you will thank you later)*/
+    
+      background-color: rgb(250, 250, 250);
+      opacity: .8;
+    }
+

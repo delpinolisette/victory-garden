@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Leaves: Main Feed</h1>
+
+
+<% @leafs.each do |leaf| %>
+<div class="card-columns">
+  <div class="card special-card" style="width: 35rem;">
+    <img class="card-img-top" src="<%= url_for(leaf.cover_img) %> alt="Card image cap">
+    <div class="card-body ">
+    <h5 class="card-title"><%=leaf.title%></h5>
+    <p class="card-text"><%leaf.body%></p>
+    <% current_user.trees.each do |tree| %>
+      <a rel="nofollow" data-method="post" href=/add_leaf_to_tree/<%= tree.id %>/<%= leaf.id %> class="btn btn-primary">Add to Tree <%=tree.id%></a> 
+    <% end %>
+    </div>
+  </div>
+  </div>
+<% end %>
+
+<%= link_to 'New Leaf', new_leaf_path %>

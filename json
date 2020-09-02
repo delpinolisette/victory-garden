@@ -1,0 +1,13 @@
+
+[1mFrom:[0m /home/vagrant/CIS-196/victorygarden/app/models/fact.rb:17 Fact#query_for_fdcid:
+
+    [1;34m10[0m: [32mdef[0m [1;34mquery_for_fdcid[0m
+    [1;34m11[0m:     [1;34m#find the id of the food typed in[0m
+    [1;34m12[0m:     base_url = [31m[1;31m"[0m[31mhttps://api.nal.usda.gov/fdc/v1/foods/search[1;31m"[0m[31m[0m
+    [1;34m13[0m:     query = [31m[1;31m"[0m[31m#{base_url}[0m[31m?query=#{self.search}[0m[31m&dataType=&pageSize=1&pageNumber=1&sortOrder=asc&api_key=#{api_key}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m14[0m:     resp = [1;34;4mHTTP[0m.get(query)
+    [1;34m15[0m:     json = [1;34;4mJSON[0m.parse(resp)
+    [1;34m16[0m:     [1;34m#json[0][:fdcId][0m
+ => [1;34m17[0m:     binding.pry
+    [1;34m18[0m: [32mend[0m
+

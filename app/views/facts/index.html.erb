@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Facts</h1>
+
+<br>
+<%@facts.each do |fact|%>
+<div class = "row">
+<div class="col-6" style="padding: 10px;">
+<div class="card special-card" style="width: 45rem;">
+  <div class="card-body">
+    <h5 class="card-title">Nutritional Information</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Data pulled from FDC API</h6>
+    <ul><%= fact.search %></ul>
+    <ul><td><%= link_to 'Show', fact %></ul>
+    <ul><td><%= link_to 'Edit', edit_fact_path(fact) %></ul>
+    <ul><td><%= link_to 'Destroy', fact, method: :delete, data: { confirm: 'Are you sure?' } %></ul> 
+   <ul><%= link_to 'New Fact', new_fact_path %></ul>
+  </div>
+</div>
+</div>
+</div>
+<%end%>

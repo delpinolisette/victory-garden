@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="card special-card" style="width: 35rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @tree.name %></h5>
+    <p class="card-text">Check out my leaves!</p>
+   <%= link_to 'Edit', edit_tree_path(@tree) %> |
+   <%= link_to 'Back', trees_path %>
+  </div>
+</div>
+
+<% @tree.leafs.each do |leaf| %>
+<div class = "row">
+  <div class="col-6" style="padding: 10px;">
+    <div class="card special-card" style="width: 35rem;">
+    <div class="card-body ">
+    <h5 class="card-title"><%=leaf.title%></h5>
+       <ul><%=leaf.title%></ul>
+       <img class="card-img" src="<%= url_for(leaf.cover_img) %> alt="Card image cap">
+    <% end %>
+    </div>
+   </div>
+  </div>
+</div>
+

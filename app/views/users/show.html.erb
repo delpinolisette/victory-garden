@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="card" style="width: 35rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.username %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Plant-loving person</h6>
+    <p class="card-text">Check out my trees!</p>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+  </div>
+</div>
+
+<% @user.trees.each do |tree| %>
+<div class = "row">
+    <div class="col-6" style="padding: 10px;">
+    <div class="card special-card" style="width: 35rem;">
+    <div class="card-body ">
+    <h5 class="card-title"><%=tree.name%></h5>
+    <% tree.leafs.each do |leaf| %>
+       <ul><%=leaf.title%></ul>
+       <img class="card-img" src="<%= url_for(leaf.cover_img) %> alt="Card image cap">
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+
+
+

@@ -1,0 +1,28 @@
+<!--Bootstrap navbar reference-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<ul class="navbar-nav mr-auto">
+          <!-- Should only be seen if logged in-->
+          <% if logged_in? %>
+            <button type="button" class="btn btn-outline-info"><li class="nav-item"><%= link_to 'My Profile', "/user/profile", class: 'nav-link' %></li></button>
+            <button type="button" class="btn btn-outline-success"><li class="nav-item"><%= link_to 'Leaves Feed', "/leafs", class: 'nav-link' %></li></button>
+            <button type="button" class="btn btn-outline-success"><li class="nav-item"><%= link_to 'Food Factz!', "/facts", class: 'nav-link' %></li></button>
+            <li class="nav-item"><%= link_to 'Log Out', '/logout', method: :delete, class: 'nav-link' %></li>
+          <!-- Should only be seen if NOT logged in -->
+          <% else %>
+            <li class="nav-item"><%= link_to 'Sign Up', "/users/new", class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Log In', '/login', class: 'nav-link' %></li>
+          <% end %>
+      </ul>
+
+ 
+</nav>
+

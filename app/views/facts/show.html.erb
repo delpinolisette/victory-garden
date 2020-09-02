@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+
+<h3> <strong>Nutrition for <%= @fact.search %></strong> </h3>
+  
+<div class="card" style="width: 30rem;">
+  <div class="card-body">
+    <h5 class="card-title">Nutritional Information</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Provided by FoodDataCentral</h6>
+     <% @protein.each do |key, val| %>
+      <ul>I have <%= key["value"] %> of <%= key["nutrientName"] %></ul>
+     <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_fact_path(@fact) %> |
+<%= link_to 'Back', facts_path %>
