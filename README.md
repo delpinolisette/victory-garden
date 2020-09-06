@@ -18,10 +18,9 @@ for Password Encryption:
 
 Database:
 1. SQLite 3
-2. 
 
-TODO: finish writing documentation: 
-work on making this RVM so no one has to install anything lol
+TODO: finish writing documentation :)
+- work on constructing a ruby virtual environment. 
 
 https://guides.rubyonrails.org/getting_started.htmlr
 This README would normally document whatever steps are necessary to get the

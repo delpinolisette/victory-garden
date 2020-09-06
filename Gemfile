@@ -73,6 +73,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # fix es6 errors
-gem 'libv8', '~> 3.16.14.18' # for racer
-gem 'therubyracer'
-gem 'execjs'
+#vgem 'libv8', '~> 3.16.14.18' # for racer
+#gem 'therubyracer'
+#gem 'execjs'
