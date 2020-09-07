@@ -45,6 +45,8 @@ process:
 3. after a tree is created it has a creator and should show up on the users show page. 
 3. want to make sure that the tree has a show page that shows all its leaves. 
 4. then i need to solve the issue of where to put the leaves?
+5. want to fix upload file issue for leaves. 
+    - where is the instructor video ?
 
 
 
