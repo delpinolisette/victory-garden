@@ -6,7 +6,7 @@
 <% @leafs.each do |leaf| %>
 <div class="card-columns">
   <div class="card special-card" style="width: 35rem;">
-    <img class="card-img-top" src="<%= url_for(leaf.cover_img) %> alt="Card image cap">
+    <img class="card-img-top" src="<%= url_for(leaf.cover_img) %> alt="Image-less Leaf!">
     <div class="card-body ">
     <h5 class="card-title"><%=leaf.title%></h5>
     <p class="card-text"><%leaf.body%></p>

@@ -17,7 +17,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
 /* 
  * Custom Styles
  */
@@ -34,7 +33,7 @@
 
   body {
     font-family: 'Andale Mono', monospace;
-    background-color: #aff59e !important; 
+    background-color: #a3e4cd !important; 
   }
 
   h1 {
@@ -67,6 +66,7 @@
     font-weight: 300;
     line-height: 1.25;
     font-family: 'Andale Mono', monospace;
+    text-rendering: optimizeLegibility;
   }
   
   p {
@@ -83,14 +83,90 @@
     font-family: "Open Sans",sans-serif;
   }
 
+  /* Special CSS */
   .special-card {
     /* create a custom class so you 
        do not run into specificity issues 
        against bootstraps styles
        which tends to work better than using !important 
-       (future you will thank you later)*/
+       (future you will thank you later), Lisette*/
     
       background-color: rgb(250, 250, 250);
       opacity: .8;
     }
 
+    #circle-shape { 
+      margin: 2rem; 
+    }
+    #circle-shape-p { 
+      *line-height: .5;
+
+    }
+    #circle-shape .curve { 
+      width: 33%; height: auto;
+      min-width: 150px;
+      float: left;
+      margin-right:2rem; 
+      border-radius: 50%;
+      -webkit-shape-outside:circle();
+      shape-outside:circle();
+      /*padding: 1%; */
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #ffc6e5;
+      background-clip: border-box;
+      border: 1mm ridge rgba(83, 201, 113, 0.6);
+      border-radius: 30px;
+    
+      > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
+}
+
+/* Card Images */
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $card-img-overlay-padding;
+}
+
+.card-img {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  //@include border-radius($card-inner-border-radius);
+  border-radius: 30px;
+}
+
+// Card image caps
+.card-img-top {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  //@include border-top-radius($card-inner-border-radius);
+  border-radius: 30px;
+}
+
+.card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  //@include border-bottom-radius($card-inner-border-radius);
+  border-radius: 30px;
+}

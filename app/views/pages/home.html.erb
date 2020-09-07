@@ -1,20 +1,31 @@
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<!--title-->
 <div class="container-fluid">
   <h1> Welcome to Victory Garden!</h1>
 
   <h3>Victory Garden is a home for discovering, creating, and storing facts about food!</h3>
+</div>
+
+<!-- this is how you render images and circle im on rails views -->
+
+  <div id="circle-shape">
+  <%= image_tag("plate.png",:class => "curve") %>
+
+  <p>"Victory gardens, also called war gardens or food gardens for defense, were vegetable, fruit, and herb gardens planted at private residences and public parks in the United States, United Kingdom, Canada, Australia and Germany during World War I and World War II. In the war time governments encouraged people to plant victory gardens not only to supplement their rations but also to boost morale</h2>
+  </div>
+  <div class="container-fluid">
   <p>We have a food facts repository so you can see if you're getting all the nutrients you need.</p>
   <p>We also have a Tree-Leaf system to store and create important gardening knowledge</p>
   <p>How do I get started?</p>
   <p>First, you need to log in or sign up. After this, make a personal tree to store all your leaves. </p>
   <p>You can make multiple trees for your organizing needs!</p>
   <p>Also, if you're ever interested in sharing gardening knowledge, go ahead and make a leaf.</p>
-
-  <h4>"Victory gardens, also called war gardens or food gardens for defense, were vegetable, fruit, and herb gardens planted at private residences and public parks in the United States, United Kingdom, Canada, Australia and Germany during World War I and World War II. In the war time governments encouraged people to plant victory gardens not only to supplement their rations but also to boost morale</h2>
+  <p>"Victory gardens, also called war gardens or food gardens for defense, were vegetable, fruit, and herb gardens planted at private residences and public parks in the United States, United Kingdom, Canada, Australia and Germany during World War I and World War II. In the war time governments encouraged people to plant victory gardens not only to supplement their rations but also to boost morale</h2>
   <p>With many families struggling to secure fresh food during the Covid-19 outbreak, this website hopes to aid in providing more ways to obtain fresh food</p>
   <p>You can also research the nutrient density of your food to make sure you are eating enough!</p>
 </div>
 
+<!--
 <% data = {
   labels: ["January", "February", "March", "April", "May", "June", "July"],
   datasets: [
@@ -33,3 +44,4 @@
   ]
 }%>
 <%= line_chart data %>
+-->
