@@ -53,6 +53,6 @@ process:
 
 ### Aesthetics
 
-1. download nice sample images of people growing shit indoors 
+1. download nice sample images of people growing indoors
 2. maybe make it look stylized like a cartoon could be cute!
 
